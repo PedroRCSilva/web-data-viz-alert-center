@@ -1,0 +1,429 @@
+/* Início da estilização da navbar */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+    background-image: url('../img/Background-degrade.jpg');
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .navbar {
+    background-color: #070330;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.drop-down {
+    background-color: #1F1B3F;
+    border-radius: 30px;
+    padding: 8px 15px;
+    margin: 0 -85px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.container .user-pic {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.drop-down p {
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    width: 100%;
+    text-align: right;
+    display: flex;
+}
+
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.navbar ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    border-radius: 20px;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 430px;
+}
+
+.sub-menu {
+    width: 100%;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3 {
+    font-weight: 500;
+    color: black;
+}
+
+.user-info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    margin: 12px 5px;
+}
+
+.sub-menu-link img {
+    width: 40px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link p {
+    width: 100%;
+    color: #000;
+}
+
+.sub-menu-link span {
+    font-size: 22px;
+    transition: transform 0.5s;
+    color: #000;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+    font-weight: 600;
+}
+
+
+/* Inicio dos gráficos e caixas de texto */
+.container-1 {
+    max-width: 1900px;
+    column-gap: 50px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    padding: 15px 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+
+}
+
+.caixa {
+    width: 380px;
+    height: 1273px;
+    row-gap: 30px;
+    border-radius: 12px;
+    background-color: #040524;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.cliente {
+    width: 349px;
+    height: 85px;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: #1F1B3F;
+}
+
+.cliente h1,
+.cliente p {
+    padding: 10px 0 0 10px;
+    display: flex;
+    justify-content: start;
+    text-align: center;
+}
+
+.cliente h1 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.cliente p {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.relatorio-rack {
+    flex: 1;
+}
+
+.relatorio-downtime {
+    flex: 1;
+}
+
+.relatorio-rack #chart-relatorio-rack {
+    border-radius: 10px;
+    color: #FFF;
+    background-color: #1F1B3F;
+    padding: 15px;
+}
+
+.relatorio-downtime #chart-relatorio-downtime {
+    border-radius: 10px;
+    color: #FFF;
+    background-color: #1F1B3F;
+    padding: 15px;
+}
+
+.grafico-geral {
+    padding: 0 20px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #040524;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 5;
+}
+
+.caixa-kpi {
+    width: 100%;
+    background-color: #212121;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 15px;
+    transition: 1s;
+
+}
+
+.kpi-temperatura,
+.kpi-umidade {
+    width: 100%;
+    margin: auto;
+    background-color: #1F1B3F;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+.indices {
+    column-gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.indices p {
+    padding: 3px;
+
+}
+
+#p-perigo-min {
+    color: #078BEE;
+}
+
+#p-alerta {
+    color: #E9EE07;
+}
+
+#p-ideal {
+    color: #19EE07;
+}
+
+#p-perigo-max {
+    color: #E0211B;
+}
+
+.kpi-temperatura .kpi-atual {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.kpi-umidade .kpi-atual {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.kpi-atual #temperatura-minima,
+#temperatura-alerta,
+#temperatura-ideal,
+#temperatura-perigo,
+#umidade-minima,
+#umidade-alerta,
+#umidade-ideal,
+#umidade-perigo,
+#umidade-perigo {
+    width: 23%;
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.kpi-atual p {
+    position: absolute;
+    opacity: 0;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.caixa-kpi {
+    animation: 1s animation all;
+}
+
+.caixa-kpi:hover .kpi-atual p {
+    position: relative;
+    opacity: 1;
+    transition: 1s;
+}
+
+.animation {
+    height: 90px;
+    transition: 0.8s;
+}
+
+.caixa-kpi:hover .animation {
+    height: 150px;
+    transition: 0.8s;
+}
+
+.kpi-atual #dado {
+    font-weight: 700;
+    font-size: 32px;
+
+}
+
+.kpi-atual #temperatura-minima,
+#umidade-minima {
+    border: #078BEE solid 5px;
+
+}
+
+#temperatura-minima h2,
+#temperatura-minima h3,
+#temperatura-minima p,
+#umidade-minima h2,
+#umidade-minima h3,
+#umidade-minima p {
+    color: #078BEE;
+}
+
+.kpi-atual #temperatura-alerta,
+#umidade-alerta {
+    border: #E9EE07 solid 5px;
+
+}
+
+#temperatura-alerta h2,
+#temperatura-alerta h3,
+#temperatura-alerta p,
+#umidade-alerta h2,
+#umidade-alerta h3,
+#umidade-alerta p {
+    color: #E9EE07;
+}
+
+.kpi-atual #temperatura-ideal,
+#umidade-ideal {
+    border: #19EE07 solid 5px;
+}
+
+#temperatura-ideal h2,
+#temperatura-ideal h3,
+#temperatura-ideal p,
+#umidade-ideal h2,
+#umidade-ideal h3,
+#umidade-ideal p {
+    color: #19EE07;
+}
+
+.kpi-atual #temperatura-perigo,
+#umidade-perigo {
+    border: #E0211B solid 5px;
+}
+
+#temperatura-perigo h2,
+#temperatura-perigo h3,
+#temperatura-perigo p,
+#umidade-perigo h2,
+#umidade-perigo h3,
+#umidade-perigo p {
+    color: #E0211B;
+}
+
+#chart-geral-temp,
+#chart-geral-umid {
+    height: 369px;
+    width: calc(100vw - 620px);
+    border-radius: 10px;
+    color: #FFF;
+    background-color: #1F1B3F;
+    margin: 15px;
+    padding: 15px;
+}

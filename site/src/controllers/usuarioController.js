@@ -65,6 +65,15 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var cnpj = req.body.cnpjServer;
+    var tipo = req.body.tipoServer;
+    var logradouro = req.body.logradouroServer;
+    var numero = req.body.numeroServer;
+    var bairro = req.body.bairroServer;
+    var cidade = req.body.cidadeServer;
+    var complemento = req.body.complementoServer;
+    var telefone = req.body.telefoneServer;
+    var celular = req.body.celularServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -73,10 +82,47 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else {
+    } else if(cnpj==undefined) {
+        res.status(400).send("Seu email está undefined!");
+        
+    }
+    else if(tipo==undefined) {
+        res.status(400).send("Seu tipo está undefined!");
+        
+    }
+    else if(logradouro==undefined) {
+        res.status(400).send("Seu logradouro está undefined!");
+        
+    }
+    else if(numero==undefined) {
+        res.status(400).send("Seu numero está undefined!");
+        
+    }
+    else if(bairro==undefined) {
+        res.status(400).send("Seu bairro está undefined!");
+        
+    }
+    else if(cidade==undefined) {
+        res.status(400).send("Seu cidade está undefined!");
+        
+    }
+    else if(complemento==undefined) {
+        res.status(400).send("Seu complemento está undefined!");
+        
+    }
+    else if(telefone==undefined) {
+        res.status(400).send("Seu telefone está undefined!");
+        
+    }
+    else if(celular==undefined) {
+        res.status(400).send("Seu celular está undefined!");
+        
+    }
+    else {
+
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha,cnpj,telefone,celular)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -85,7 +131,7 @@ function cadastrar(req, res) {
                 function (erro) {
                     console.log(erro);
                     console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        "\nHouve um erro ao realizar o cadastro! Teste: ",
                         erro.sqlMessage
                     );
                     res.status(500).json(erro.sqlMessage);
